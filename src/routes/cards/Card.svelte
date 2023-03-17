@@ -36,8 +36,8 @@
 		</span></h4>
 		<div class="picture"><img src={pokemon?.sprites?.versions?.['generation-v']?.['black-white']?.animated?.front_default} alt={name} /></div>
 		<div class="details">
-			<p>#{pokemon.id}</p>
-			<p class="flavor-text">{flavorText}</p>
+			<!-- <p style="font-size: 10px;">#{pokemon.id}</p> -->
+			<p class="flavor-text" title={flavorText}>{flavorText}</p>
 		</div>
 	</div>
 {/await}
@@ -88,9 +88,10 @@
     }
   }
 	.picture {
-		width: auto;
+		width: 180px;
+		height: 130px;
 		margin: 0 10px;
-		aspect-ratio: 3.5/2.5;
+		/* aspect-ratio: 3.5/2.5; */
 		background-color: white;
 		border-radius: 3px;
 		outline: 1px solid black;
@@ -105,13 +106,14 @@
 	.details {
 		flex: 2 1 0;
 		color: black;
-		height: max-content;
+		height: 77.5px;
 		width: auto;
 		margin: 5px 10px 10px;
-		background-color: white;
+		background-color: rgba(255, 255, 255, 0.4);
 		border-radius: 3px;
 		outline: 1px solid black;
 		border: 2px solid darkgoldenrod;
+		overflow: hidden;
 	}
 	.details p {
 		margin: 0;
